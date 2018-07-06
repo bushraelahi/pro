@@ -36,10 +36,7 @@ for root,dirs,files in os.walk("."):
                   stopwordremoved.close() 
     tagger = treetaggerwrapper.TreeTagger(TAGLANG='en',TAGDIR='C:\TreeTagger')
     tags = tagger.tag_file('stopwords not removed.txt')
-    lemmas=open('tags','a')
-    lemmas.write(tags)
-    lemmas.close()
-    pprint.pprint(tags)
+    tags1= treetaggerwrapper.make_tags(tags)
    
 
                 
